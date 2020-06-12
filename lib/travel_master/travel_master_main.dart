@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:uicollection/travel_master/detail_page.dart';
 
 class TravelMasterMain extends StatefulWidget {
   @override
@@ -151,7 +152,11 @@ class _TravelMasterMainState extends State<TravelMasterMain> {
     return Padding(
       padding: const EdgeInsets.all(10.0),
       child: InkWell(
-        onTap: () {},
+        onTap: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(builder: (c)=> DetailPage())
+          );
+        },
         child: Stack(
           children: <Widget>[
             Container(
@@ -169,6 +174,8 @@ class _TravelMasterMainState extends State<TravelMasterMain> {
                   borderRadius: BorderRadius.circular(20),
                   color: Colors.black.withOpacity(0.4)),
             ),
+
+
 
             Positioned(
               top: 10.0,
@@ -221,47 +228,49 @@ class _TravelMasterMainState extends State<TravelMasterMain> {
             ),
 
 
-            Positioned(
-                top: 225.0,
-                left: 10.0,
-                child: Row(children: [
-                  Text('I was here',
-                      style: TextStyle(
-                          fontFamily: 'Opensans',
-                          fontSize: 15.0,
-                          color: Colors.white,
-                          fontWeight: FontWeight.w600)),
-                  SizedBox(width: 15.0),
-                  Stack(
-                    children: <Widget>[
-                      Container(height: 40.0, width: 100.0),
-                      Container(
-                        height: 40.0,
-                        width: 40.0,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20.0),
-                            image: DecorationImage(
-                                image: AssetImage('assets/profilepic.jpg'),
-                                fit: BoxFit.cover)),
-                      ),
-                      Positioned(
-                        left: 30.0,
-                        child: Container(
+            Align(
+              alignment: Alignment.bottomLeft,
+                child: Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Row(children: [
+                    Text('I was here',
+                        style: TextStyle(
+                            fontFamily: 'Opensans',
+                            fontSize: 15.0,
+                            color: Colors.white,
+                            fontWeight: FontWeight.w600)),
+                    SizedBox(width: 15.0),
+                    Stack(
+                      children: <Widget>[
+                        Container(height: 40.0, width: 100.0),
+                        Container(
                           height: 40.0,
                           width: 40.0,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20.0),
-                              color: Colors.white),
-                          child: Center(
-                            child: Text('+17..',
-                                style: TextStyle(
-                                    fontSize: 14.0, color: Colors.black)),
-                          ),
+                              image: DecorationImage(
+                                  image: AssetImage('assets/profilepic.jpg'),
+                                  fit: BoxFit.cover)),
                         ),
-                      )
-                    ],
-                  )
-                ]))
+                        Positioned(
+                          left: 30.0,
+                          child: Container(
+                            height: 40.0,
+                            width: 40.0,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20.0),
+                                color: Colors.white),
+                            child: Center(
+                              child: Text('+17..',
+                                  style: TextStyle(
+                                      fontSize: 14.0, color: Colors.black)),
+                            ),
+                          ),
+                        )
+                      ],
+                    )
+                  ]),
+                ))
 
 
           ],
