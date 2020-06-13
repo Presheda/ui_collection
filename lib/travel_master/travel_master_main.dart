@@ -153,9 +153,8 @@ class _TravelMasterMainState extends State<TravelMasterMain> {
       padding: const EdgeInsets.all(10.0),
       child: InkWell(
         onTap: () {
-          Navigator.of(context).push(
-            MaterialPageRoute(builder: (c)=> DetailPage())
-          );
+          Navigator.of(context)
+              .push(MaterialPageRoute(builder: (c) => DetailPage()));
         },
         child: Stack(
           children: <Widget>[
@@ -174,9 +173,6 @@ class _TravelMasterMainState extends State<TravelMasterMain> {
                   borderRadius: BorderRadius.circular(20),
                   color: Colors.black.withOpacity(0.4)),
             ),
-
-
-
             Positioned(
               top: 10.0,
               left: 10.0,
@@ -190,22 +186,22 @@ class _TravelMasterMainState extends State<TravelMasterMain> {
                         color: Colors.black.withOpacity(0.2)),
                     child: Center(
                         child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            Icon(Icons.star, color: Colors.white, size: 12.0),
-                            SizedBox(width: 5.0),
-                            Text(
-                              rating,
-                              style: TextStyle(color: Colors.white),
-                            )
-                          ],
-                        )),
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Icon(Icons.star, color: Colors.white, size: 12.0),
+                        SizedBox(width: 5.0),
+                        Text(
+                          rating,
+                          style: TextStyle(color: Colors.white),
+                        )
+                      ],
+                    )),
                   ),
                   SizedBox(width: 50.0),
                   Text(
                     'More',
-                    style: TextStyle(
-                        color: Colors.white, fontFamily: 'Opensans'),
+                    style:
+                        TextStyle(color: Colors.white, fontFamily: 'Opensans'),
                   ),
                   SizedBox(width: 7.0),
                   //this should be an iconbutton in a real app.
@@ -213,7 +209,6 @@ class _TravelMasterMainState extends State<TravelMasterMain> {
                 ],
               ),
             ),
-
             Positioned(
               top: 165.0,
               left: 10.0,
@@ -226,10 +221,8 @@ class _TravelMasterMainState extends State<TravelMasterMain> {
                         fontWeight: FontWeight.w600)),
               ),
             ),
-
-
             Align(
-              alignment: Alignment.bottomLeft,
+                alignment: Alignment.bottomLeft,
                 child: Padding(
                   padding: const EdgeInsets.all(15.0),
                   child: Row(children: [
@@ -271,8 +264,6 @@ class _TravelMasterMainState extends State<TravelMasterMain> {
                     )
                   ]),
                 ))
-
-
           ],
         ),
       ),
