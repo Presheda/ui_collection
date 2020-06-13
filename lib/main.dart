@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:uicollection/burger_app/dashboard_page.dart';
 import 'package:uicollection/coffee_app/coffee_main.dart';
 import 'package:uicollection/dumplings/dumplings_main.dart';
+import 'package:uicollection/food_concept/food_concept_main.dart';
 import 'package:uicollection/japan_travel/homepage.dart';
 import 'package:uicollection/kayaking/kayaking_main.dart';
 import 'package:uicollection/travel_master/travel_master_main.dart';
@@ -61,6 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
               buildItems(DumplingsHomePage(), "Dumplings", context),
               buildItems(TravelMasterMain(), "Travel Master", context),
               buildItems(WineAppMain(), "Wine App", context),
+              buildItems(FoodConceptMain(), "Food Concept", context),
             ],
           ),
         ));
