@@ -24,7 +24,7 @@ class _WineAppMainState extends State<WineAppMain> {
           Stack(
             children: <Widget>[
               Container(
-                height: screenHeight * 0.5,
+                height: screenHeight * 0.6,
                 decoration: BoxDecoration(
                     borderRadius:
                         BorderRadius.only(bottomLeft: Radius.circular(50)),

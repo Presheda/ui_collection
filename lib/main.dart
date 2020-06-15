@@ -11,6 +11,7 @@ import 'package:uicollection/wine_app/wine_main.dart';
 
 import 'cook_book/cook_book_main.dart';
 import 'cookies_app/cookies_main.dart';
+import 'fancy_design/fancy_design_main.dart';
 
 void main() {
   runApp(MyApp());
@@ -63,6 +64,7 @@ class _MyHomePageState extends State<MyHomePage> {
               buildItems(TravelMasterMain(), "Travel Master", context),
               buildItems(WineAppMain(), "Wine App", context),
               buildItems(FoodConceptMain(), "Food Concept", context),
+              buildItems(FancyDesignMain(), "Fancy Design", context),
             ],
           ),
         ));
